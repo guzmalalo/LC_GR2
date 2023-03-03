@@ -117,6 +117,30 @@ void liberationRecu(Maillon **m){
     *m= NULL;
 }
 
+void procAjoutEnFinDeListe(Maillon **m, int n, const char *nom)
+{
+    Maillon *temp = NULL;
+    Maillon *tail = NULL;
+    Maillon *head = *m;
+
+    if (head == NULL)
+    {
+        head = initMaillon(n, nom);
+    }
+    else
+    {
+        temp = initMaillon(n, nom);
+        tail = head;
+        while (tail->next != NULL)
+        {
+            tail = tail->next;
+        }
+        tail->next = temp;
+    }
+
+    *m = head;
+}
+
 int main()
 {
     printf("\n\n********* Liste simplement chaînée *********\n\n");
@@ -134,6 +158,11 @@ int main()
     printf("HEAD \n");
     afficherListeRecur(liste);
 
+    // Ajout en fin de liste (TAIL)
+    printf("\n\n********* Ajout fin de liste *****\n\n");
+    procAjoutEnFinDeListe(&liste, 3, "C");
+    procAjoutEnFinDeListe(&liste, 4, "D");
+    afficherListeAvecWhile(liste);
 
     // Liberation
     printf("\n\n********* Free ******************\n\n");
