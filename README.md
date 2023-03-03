@@ -1,2 +1,12 @@
-# LC_GR2
-TP linkedlist GR2
+# Listes chainées 
+
+**A faire**
+
+- [ ] Liberation récursivité
+- [ ] Ajouter au début
+- [ ] Ajouter à la fin
+- [ ] Piocher ah début
+- [ ] Piocher à la fin
+- [ ] Rechercher
+
+Si fini, passer aux listes circulaires, doublement chainées.
