@@ -108,8 +108,14 @@ void afficherListeRecur(Maillon *liste)
     }
 }
 
+void liberationRecu(Maillon **m){
 
-
+    if(*m == NULL)
+        return ;
+    liberationRecu(&((*m)->next));
+    free(*m);
+    *m= NULL;
+}
 
 int main()
 {
