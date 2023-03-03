@@ -3,9 +3,9 @@
 **A faire**
 
 - [X] Liberation récursivité
-- [ ] Ajouter à la fin
-- [ ] Ajouter au début
-- [ ] Piocher ah début
+- [X] Ajouter à la fin
+- [X] Ajouter au début
+- [X] Piocher au début
 - [ ] Piocher à la fin
 - [ ] Rechercher
 
