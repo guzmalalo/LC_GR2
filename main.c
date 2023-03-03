@@ -141,6 +141,21 @@ void procAjoutEnFinDeListe(Maillon **m, int n, const char *nom)
     *m = head;
 }
 
+void procAjoutEnTeteDeListe(Maillon **m, int n, const char *nom)
+{
+    Maillon *temp =  NULL;
+    if (*m == NULL)
+    {
+        *m = initMaillon(n,nom);
+    }
+    else
+    {
+        temp = initMaillon(n,nom);
+        temp->next = *m;
+        *m = temp;
+    }
+}
+
 int main()
 {
     printf("\n\n********* Liste simplement chaînée *********\n\n");
@@ -163,6 +178,14 @@ int main()
     procAjoutEnFinDeListe(&liste, 3, "C");
     procAjoutEnFinDeListe(&liste, 4, "D");
     afficherListeAvecWhile(liste);
+
+    // Ajout en tete de liste (HEAD)
+    printf("\n\n********* Ajout fin de liste *****\n\n");
+    procAjoutEnTeteDeListe(&liste, 5, "E");
+    procAjoutEnTeteDeListe(&liste, 6, "F");
+    afficherListeAvecWhile(liste);
+
+
 
     // Liberation
     printf("\n\n********* Free ******************\n\n");
