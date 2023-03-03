@@ -156,6 +156,25 @@ void procAjoutEnTeteDeListe(Maillon **m, int n, const char *nom)
     }
 }
 
+Maillon *funcPiocherTete(Maillon **m)
+{
+
+    Maillon *temp = NULL;
+
+    if (*m == NULL)
+    {
+        return temp;
+    }
+    else
+    {
+        temp = *m;
+        *m = (*m)->next;
+    }
+
+    return temp;
+}
+
+
 int main()
 {
     printf("\n\n********* Liste simplement chaînée *********\n\n");
